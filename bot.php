@@ -47,3 +47,5 @@ if (!is_null($events['events'])) {
  }
 }
 echo "OK";
+
+?>
