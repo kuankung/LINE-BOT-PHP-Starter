@@ -48,7 +48,7 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "พิมพ์ "คู่มือ" หรือ "help" เพื่อดูการใช้งาน ";
+  $arrPostData['messages'][0]['text'] = "พิมพ์ คู่มือ หรือ help เพื่อดูการใช้งาน ";
 }
  
  
