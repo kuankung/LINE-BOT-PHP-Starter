@@ -131,7 +131,7 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
  ธนาคารอิสลาม=>02-204-2766
  และธนาคารทิสโก้=>02-633-6000
   "; 
-}else if($arrJson['events'][0]['message']['text'] == "1.2"){
+}else if($arrJson['events'][0]['message']['text'] == "1.5"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
@@ -214,7 +214,7 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
  บริษัท ลิเบอร์ตี้ประกันภัย จำกัด
 - สามารถติดต่อได้ 02-322-3001
  "; 
-}else if($arrJson['events'][0]['message']['text'] == "1.3"){
+}else if($arrJson['events'][0]['message']['text'] == "1.6"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
