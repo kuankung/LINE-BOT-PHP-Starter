@@ -16,7 +16,37 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
   $arrPostData['messages'][0]['type'] = "text";
   //$arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
   $arrPostData['messages'][0]['text'] = "สวัสดีชาวโลก";
-}else if(($arrJson['events'][0]['message']['text'] == "help") or ($arrJson['events'][0]['message']['text'] == "คู่มือ")){
+}else if($arrJson['events'][0]['message']['text'] == "สวัสดีครับ"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "สวัสดีชาวโลก";  
+}else if($arrJson['events'][0]['message']['text'] == "สวัสดีค่ะ"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "สวัสดีชาวโลก";  
+}else if($arrJson['events'][0]['message']['text'] == "หวัดดี"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "สวัสดีชาวโลก";
+ }else if($arrJson['events'][0]['message']['text'] == "ชื่ออะไร"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "ฉันชื่อ MR.HUG BOT"; 
+ }else if($arrJson['events'][0]['message']['text'] == "ชื่อของคุณคืออะไร"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "ฉันชื่อ MR.HUG BOT";   
+ }else if($arrJson['events'][0]['message']['text'] == "คุณชื่ออะไร"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "ฉันชื่อ MR.HUG BOT";  
+}else if($arrJson['events'][0]['message']['text'] == "help"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
@@ -34,16 +64,25 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
      พิมพ์ 2.4 => หมวดหมู่ย่อย 2.4  สอบถามค่าโทรศัพท์รายเดือน ดีเเทค /ดีแทคไตรเนต
      พิมพ์ 2.5 => หมวดหมู่ย่อย 2.5  สอบถามค่าโทรศัพท์ทรูมูฟ /ทรูมูฟ เฮส  
   ";
-}else if(($arrJson['events'][0]['message']['text'] == "ชื่ออะไร") or ($arrJson['events'][0]['message']['text'] == "คุณชื่ออะไร") or ($arrJson['events'][0]['message']['text'] == "ชื่อของคุณคืออะไร")){
+ }else if($arrJson['events'][0]['message']['text'] == "คู่มือ"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "ฉันชื่อ MR.HUG BOT";  
-}else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้บ้าง"){
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
+  $arrPostData['messages'][0]['text'] = "
+  คู่มืออยู่ระหว่างการจัดทำ
+    พิมพ์ 1 => หมวดที่ 1 สายด่วน
+      พิมพ์ 1.1 => หมวดหมู่ย่อย 1.1  สายด่วนธนาคาร
+      พิมพ์ 1.2 => หมวดหมู่ย่อย 1.2  สายด่วนบริษัทประกัน
+      พิมพ์ 1.3 => หมวดหมู่ย่อย 1.3  สายด่วนโรงพยาบาล
+      พิมพ์ 1.4 => หมวดหมู่ย่อย 1.4  สายด่วนฉุกเฉิน
+    พิมพ์ 2 => หมวดที่ 2 สอบถามยอดค่าชำระ
+     พิมพ์ 2.1 => หมวดหมู่ย่อย 2.1  สอบถามค่าไฟฟ้าส่วนภูมิภาค
+     พิมพ์ 2.2 => หมวดหมู่ย่อย 2.2  สอบถามค่าไฟฟ้านครหลวง
+     พิมพ์ 2.3 => หมวดหมู่ย่อย 2.3  สอบถามค่าโทรศัพท์รายเดือน เอไอเอส /เอไอเอส 3G
+     พิมพ์ 2.4 => หมวดหมู่ย่อย 2.4  สอบถามค่าโทรศัพท์รายเดือน ดีเเทค /ดีแทคไตรเนต
+     พิมพ์ 2.5 => หมวดหมู่ย่อย 2.5  สอบถามค่าโทรศัพท์ทรูมูฟ /ทรูมูฟ เฮส  
+  "; 
+
 }else{
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
