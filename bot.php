@@ -131,7 +131,7 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
  ธนาคารอิสลาม=>02-204-2766
  และธนาคารทิสโก้=>02-633-6000
   "; 
-}else if($arrJson['events'][0]['message']['text'] == "1.2"){
+ }else if($arrJson['events'][0]['message']['text'] == "1.2"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
@@ -213,8 +213,8 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 - สามารถติดต่อได้ 02-720-1128  
  บริษัท ลิเบอร์ตี้ประกันภัย จำกัด
 - สามารถติดต่อได้ 02-322-3001
-  "; 
-}else if($arrJson['events'][0]['message']['text'] == "1.3"){
+ "; 
+ }else if($arrJson['events'][0]['message']['text'] == "1.3"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
@@ -300,7 +300,7 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 โรงพยาบาลสมเด็จพระบรมราชเทวี ณ ศรีราชา=>0-3832-2157-9
 โรงพยาบาลสมเด็จพระยุพราชฉวาง=>0-7548-113-5
 โรงพยาบาลสมเด็จพระยุพราชนครไทย=>0-5538-9060-1
-  "; 
+"; 
  }else if($arrJson['events'][0]['message']['text'] == "1.4"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
@@ -343,7 +343,7 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 สายด่วนบัตรทอง=>1330
 สายด่วนผู้บริโภคกับ อย.=>1556
 สายด่วนร้องทุกข์ สคบ.=>1166
-  ";
+";
   }else if($arrJson['events'][0]['message']['text'] == "2"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
