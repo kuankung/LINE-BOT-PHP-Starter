@@ -64,6 +64,14 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
      พิมพ์ 2.3 => สอบถามค่าโทรศัพท์รายเดือน เอไอเอส /เอไอเอส 3G
      พิมพ์ 2.4 => สอบถามค่าโทรศัพท์รายเดือน ดีเเทค /ดีแทคไตรเนต
      พิมพ์ 2.5 => สอบถามค่าโทรศัพท์ทรูมูฟ /ทรูมูฟ เอช
+   พิมพ์ 3=>เช็คยอด เช็คเบอร์ เช็คโปรค่ายโทรศัพท์
+     พิมพ์ 3.1=>AIS แบบเติมเงิน
+     พิมพ์ 3.2=>AIS รายเดือน
+     พิมพ์ 3.3=>DTAC แบบเติมเงิน
+     พิมพ์ 3.4=>DTAC รายเดือน
+     พิมพ์ 3.5=>TRUE MOVE แบบเติมเงิน
+     พิมพ์ 3.6=>TRUE MOVE รายเดือน
+     พิมพ์ 3.7=>กสทช.เช็คยอด เช็คโปรทุกค่าย
      .
      .
      .
@@ -91,6 +99,14 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
      พิมพ์ 2.3=>สอบถามค่าโทรศัพท์รายเดือน เอไอเอส /เอไอเอส 3G
      พิมพ์ 2.4=>สอบถามค่าโทรศัพท์รายเดือน ดีเเทค /ดีแทคไตรเนต
      พิมพ์ 2.5=>สอบถามค่าโทรศัพท์ทรูมูฟ /ทรูมูฟ เอช
+    พิมพ์ 3=>เช็คยอด เช็คเบอร์ เช็คโปรค่ายโทรศัพท์
+     พิมพ์ 3.1=>AIS แบบเติมเงิน
+     พิมพ์ 3.2=>AIS รายเดือน
+     พิมพ์ 3.3=>DTAC แบบเติมเงิน
+     พิมพ์ 3.4=>DTAC รายเดือน
+     พิมพ์ 3.5=>TRUE MOVE แบบเติมเงิน
+     พิมพ์ 3.6=>TRUE MOVE รายเดือน
+     พิมพ์ 3.7=>กสทช.เช็คยอด เช็คโปรทุกค่าย
      .
      .
      .
@@ -337,44 +353,177 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
    พิมพ์ 2.4=>สอบถามค่าโทรศัพท์รายเดือน ดีเเทค /ดีแทคไตรเนต
    พิมพ์ 2.5=>สอบถามค่าโทรศัพท์ทรูมูฟ /ทรูมูฟ เฮส  
   ";  
- }else if($arrJson['events'][0]['message']['text'] == "2.1"){
+}else if($arrJson['events'][0]['message']['text'] == "2.1"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "อยู่ระหว่างจัดทำ"; 
- }else if($arrJson['events'][0]['message']['text'] == "2.2"){
+}else if($arrJson['events'][0]['message']['text'] == "2.2"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "อยู่ระหว่างจัดทำ"; 
- }else if($arrJson['events'][0]['message']['text'] == "2.3"){
+}else if($arrJson['events'][0]['message']['text'] == "2.3"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "อยู่ระหว่างจัดทำ"; 
- }else if($arrJson['events'][0]['message']['text'] == "2.4"){
+}else if($arrJson['events'][0]['message']['text'] == "2.4"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "อยู่ระหว่างจัดทำ"; 
- }else if($arrJson['events'][0]['message']['text'] == "2.5"){
+}else if($arrJson['events'][0]['message']['text'] == "2.5"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "อยู่ระหว่างจัดทำ"; 
- }else if($arrJson['events'][0]['message']['text'] == "10"){
+}else if($arrJson['events'][0]['message']['text'] == "3"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "ขอบคุณผู้มาเยือน MR.HUG BOT ทุกท่าน ท่านสามารถร่วมแนะนำ ติชม เพื่อพัํฒนาบริการของเราให้ดียิ่งขึ้น เพื่อเป็นประโยชน์ต่อส่วนร่วม โดยส่งไลน์ให้ผู้พัฒนาที่ไอดี kuankung";   
+  $arrPostData['messages'][0]['text'] = "
+  เช็คยอด เช็คเบอร์ เช็คโปรค่ายโทรศัพท์
+   พิมพ์ 3.1=>AIS แบบเติมเงิน
+   พิมพ์ 3.2=>AIS รายเดือน
+   พิมพ์ 3.3=>DTAC แบบเติมเงิน
+   พิมพ์ 3.4=>DTAC รายเดือน
+   พิมพ์ 3.5=>TRUE MOVE แบบเติมเงิน
+   พิมพ์ 3.6=>TRUE MOVE รายเดือน
+   พิมพ์ 3.7=>กสทช.เช็คยอด เช็คโปรทุกค่าย
+   
+ "; 
+}else if($arrJson['events'][0]['message']['text'] == "3.1"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "
+  AIS แบบเติมเงิน
+   เติมเงินให้หมายเลขตัวเอง=>กด*120*รหัสบัตรเติมเงิน#
+   เติมเงินให้หมายเลขอื่นในระบบ1-2-Call=>กด*130*เบอร์1-2-Call*รหัสบัตรเติมเงิน#
+   เช็คยอดเงินและจำนวนวันคงเหลือ=>กด*121#
+   เช็คยอดเงินและวันหมดอายุของโบนัสค่าโทร=>กด*121*1#
+   เช็คยอดคงเหลือแพ็คเกจSMS,MMSและGPRS=>กด*139#
+   เช็คโปรโมชันที่ใช้งานอยู่=>กด*777#
+   เช็คเบอร์โทรของตัวเอง=>กด*545#
+   สมัครบริการข้ามแดนอัตโนมัติหรือโรมมิ่ง=>กด*125*1#
+   โทรออกเมื่ออยู่ต่างประเทศ=>กด*131*รหัสประเทศหมายเลขโทรศัพท์#
+ "; 
+}else if($arrJson['events'][0]['message']['text'] == "3.2"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "
+  AIS รายเดือน
+   -เช็กยอดบริการระหว่างรอบบิล (บาท)=>*121*1#โทร
+   -เช็กยอดคงเหลือรวมทุกแพ็กเกจ=>*121*21#โทร
+   -เช็กยอดคงเหลือรายแพ็กเกจ=>*121*22#โทร
+   -เช็กยอดค้างชำระ=>*121*3#โทร
+   -เช็กวงเงินการใช้งาน=>*121*4#โทร
+   -สมัคร/เปลี่ยนแพ็คเกจ=>*777โทร 
+  "; 
+}else if($arrJson['events'][0]['message']['text'] == "3.3"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "
+DTAC แบบเติมเงิน
+ -เช็กโปรโมชั่นปัจจุบัน (โปรฯ หลัก)=>กด *103*8#
+ -เช็กยอดเงินและวันคงเหลือ=>กด *101#
+ -เช็คยอดคงเหลือ โปรเสริมทุกแพ็กเกจ=>กด *101*1#
+ -ศูนย์รวมโปรโมชั่น=>กด *1003
+ -บ้านแฮปปี้=>กด *100
+ -ใจดีให้ยืม=>กด *110#	กด *1010
+ -ใจดีให้ยืมบีบี=>กด *110*1#	กด *1010
+ -ใจดีโทรผิดไม่คิดตังค์=>กด *111#	กด *1011
+ -ใจดีให้โอน=>กด *112*08XXXXXXXX*จำนวนเงินที่ต้องการโอน 20-200#	กด *1012
+ -ใจดีแจกวัน=>กด *113*จำนวนวันที่ต้องการ 30, 90, 180#	กด *1013
+ -ใจดีฉุกเฉิน=>กด *114*08XXXXXXXX#	กด *1014
+ -ใจดีแปลให้=>กด *1021
+ -ใจดีแจ้งเครือข่าย=>กด *7102
+ -เช็กอายุการใช้งานเบอร์แฮปปี้=>กด *102#
+ -ตรวจสอบพื้นที่ใช้งาน ของหมายเลขโทรศัพท์=>กด *102*1*08XXXXXXXX#
+ -ตรวจสอบเครือข่ายดีแทค=>กด *102*08XXXXXXXX#
+ -เช็กเบอร์แฮปปี้คนโปรด=>กด *103*6#
+ -เปิด Happy internet=>กด *104*71#
+ -ปิด Happy Internet=>กด *104*72#
+ -เปิดบริการ SMS แจ้งเตือนค่าใช้บริการ Happy internet=>กด *104*61#
+ -ปิดบริการ SMS แจ้งเตือนค่าใช้บริการ Happy internet=>กด *104*62#
+ -เช็กยอดการใช้งาน แฮปปี้แบงก์รายเดือน=>กด *108#
+ -เช็กอายุการใช้งานและอายุการเป็น สมาชิกแฮปปี้แบงก์=>กด *108*2#
+ -สมัครบริการแฮปปี้โกอินเตอร์=>กด *118#
+ -ระงับบริการแฮปปี้โกอินเตอร์=>กด *118*2#
+ -ตรวจสอบสถานะบริการ แฮปปี้โกอินเตอร์=>กด *118*3#
+ -เช็กข้อมูลเกี่ยวกับการลงทะเบียน ซิมการ์ด=>กด *1002
+ -ส่งข้อมูลเพื่อขอลงทะเบียนซิมการ์ด=>กด *102*หมายเลขบัตรประชาชน 13 หลัก#
+  "; 
+}else if($arrJson['events'][0]['message']['text'] == "3.4"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "
+  DTAC รายเดือน
+   -เช็คแพ็กเกจปัจจุบัน=>กด *103*8#
+   -เช็คยอดค่าบริการค้างชำระและยอดค้างชำระระหว่างเดือน=>กด *121#
+   -เช็คยอดการใช้งานแพ็กหลักและแพ็กเสริม ของ Internet, SMS, MMS=>กด *121*1#
+   -เช็คยอดการใช้ของ dtac internet,BlackBerry และ Social Chat=>กด *121*1*1#
+   -เช็คยอดการใช้จำนวนนาทีระหว่างรอบบิล=>กด *121*2#
+   -เช็คยอดการใช้งานเฉพาะยอดค้างชำระค่าบริการเป็นบาท=>ด *121*3#
+   -เช็คยอดการใช้งานและยอดคงเหลือดีแทคโบนัสโทรฟรีระหว่างรอบบิลที่ใช้ไป=>กด *121*4#
+   -เช็คยอดการใช้งาน Data Roaming=>กด *121*14#
+  "; 
+}else if($arrJson['events'][0]['message']['text'] == "3.5"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "
+  TRUE MOVE แบบเติมเงิน
+   -เช็คเบอร์โทรศัพท์=>กด *933#โทร
+   -เช็คยอดเงิน โบนัส วันใช้งาน=>กด #123#โทร
+   -เติมเงินโทรศัพท์=>*123* รหัสบัตรเติมเงิน 14 หลัก#โทร
+   -ตรวจสอบหมายเลขโทรศัพท์ว่าเป็นหมายเลขในเครือข่ายทรูมูฟ/ทรูมูฟ เอช หรือไม่=>*933* เบอร์มือถือ 10 หลัก#โทร
+   -เปิดบริการ Internet (เมนูลัด)=>*902*01#โทร
+   -ปิดบริการ Internet (เมนูลัด)=>*902*02#โทร
+   -เปิดบริการ Internet (ขณะอยู่ต่างประเทศ)=>*113*1#โทร
+   -เปิดบริการ Internet (ขณะอยู่ต่างประเทศ)=>*113*2#โทร 
+   -เช็คยอดนาทีโทรฟรี=>กด #123*1#โทร
+   -เช็คยอด Internet & Wi-Fi=>*900#โทร
+   -เปลี่ยนแปลงโปรโมชั่น=>9305 โทร กด1
+  "; 
+}else if($arrJson['events'][0]['message']['text'] == "3.6"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "
+ TRUE MOVE รายเดือน
+  -ตรวจสอบโปรโมชั่นทีใช้งานอยู่=>*939*2#โทร
+  -ตรวจสอบยอดการใช้งาน/ยอดบิลคงค้าง หรือจ่ายบิล=>*939*1#โทร
+  -ตรวจสอบข้อมูลการใช้งาน data หรือ Internet คงเหลือ=>*900#โทร
+  -ตรวจสอบข้อมูลหมายเลขของคุณ=>*939*5*1#โทร
+  -วันเปิดใช้งาน และ อายุการใช้งาน=>*939*5*2#
+  -รอบบิล และ กำหนดชำระ=>*939*5*3#
+  -สมัครและยกเลิกแพ็กเกจเสริม=>*939*3#
+  ";  
+}else if($arrJson['events'][0]['message']['text'] == "3.7"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "
+  กสทช.เช็คยอด เช็คโปรทุกค่ายทุกเครือข่าย
+   -เช็คยอด=>*165*2#โทร
+   -เช็คโปร=>*165*1#โทร  
+  ";  
+}else if($arrJson['events'][0]['message']['text'] == "10"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "ขอบคุณผู้มาเยือน MR.HUG BOT ทุกท่าน ท่านสามารถร่วมแนะนำ ติชม เพื่อพัํฒนาบริการของเราให้ดียิ่งขึ้น เพื่อเป็นประโยชน์ต่อส่วนร่วม โดยส่งไลน์ให้ผู้พัฒนาที่ไอดี kuankung"; 
 }else{
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "พิมพ์ คู่มือ หรือ help เพื่อดูการใช้งาน ";
-}
- 
- 
+} 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strUrl);
 curl_setopt($ch, CURLOPT_HEADER, false);
