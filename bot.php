@@ -227,7 +227,7 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "
-สายด่วนโรงบาล
+สายด่วนโรงบาล1
  โรงพยาบาลบางมด=>0-2867-0606
  โรงพยาบาลบำรุงราษฏร์=>0-2667-1000
  โรงพยาบาลบีเอ็นเอช=>0-2686-2700
@@ -283,7 +283,7 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "
-สายด่วนโรงบาล
+สายด่วนโรงบาล2
  โรงพยาบาลกล้วยน้ำไท=>0-2381-2006-20
  โรงพยาบาลกรุงเทพ =>1719 0-2310-3000
  โรงพยาบาลกรุงเทพคริสเตียน=>0-2233-6981-9
