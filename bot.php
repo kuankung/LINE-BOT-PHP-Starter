@@ -104,9 +104,9 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
   $arrPostData['messages'][0]['text'] = "
   สายด่วน
     พิมพ์ 1.1=>สายด่วนธนาคาร
-    พิมพ์ 1.2=>สายด่วนบริษัทประกันภัย
-    พิมพ์ 1.3=>สายด่วนโรงพยาบาล
-    พิมพ์ 1.4=>สายด่วนฉุกเฉิน/คอลเซ็นเตอร์
+    พิมพ์ 1.2=>สายด่วนฉุกเฉิน/คอลเซ็นเตอร์    
+    พิมพ์ 1.3=>สายด่วนบริษัทประกันภัย
+    พิมพ์ 1.4=>สายด่วนโรงพยาบาล
   ";
 }else if($arrJson['events'][0]['message']['text'] == "1.1"){
   $arrPostData = array();
@@ -174,7 +174,7 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
  สายด่วนผู้บริโภคกับ อย.=>1556
  สายด่วนร้องทุกข์ สคบ.=>1166
 ";  
-}else if($arrJson['events'][0]['message']['text'] =="1.3"){
+}else if($arrJson['events'][0]['message']['text'] == "1.3"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
