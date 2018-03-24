@@ -69,6 +69,7 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
      พิมพ์ 3.5=>TRUE MOVE แบบเติมเงิน
      พิมพ์ 3.6=>TRUE MOVE รายเดือน
      พิมพ์ 3.7=>กสทช.เช็คยอด เช็คโปรทุกค่าย
+     พิมพ์ 3.8=>เพนกวิน เติมเงิน    
      .
      .
      .
@@ -101,6 +102,7 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
      พิมพ์ 3.5=>TRUE MOVE แบบเติมเงิน
      พิมพ์ 3.6=>TRUE MOVE รายเดือน
      พิมพ์ 3.7=>กสทช.เช็คยอด เช็คโปรทุกค่าย
+     พิมพ์ 3.8=>เพนกวิน เติมเงิน   
      .
      .
      .
@@ -367,6 +369,7 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
    พิมพ์ 3.5=>TRUE MOVE แบบเติมเงิน
    พิมพ์ 3.6=>TRUE MOVE รายเดือน
    พิมพ์ 3.7=>กสทช.เช็คยอด เช็คโปรทุกค่าย
+   พิมพ์ 3.8=>เพนกวิน เติมเงิน 
    
  "; 
 }else if($arrJson['events'][0]['message']['text'] == "3.1"){
@@ -466,7 +469,22 @@ DTAC แบบเติมเงิน
   กสทช.เช็คยอด เช็คโปรทุกค่ายทุกเครือข่าย
    -เช็คยอด=>*165*2#โทร
    -เช็คโปร=>*165*1#โทร  
-  ";  
+  ";
+}else if($arrJson['events'][0]['message']['text'] == "3.8"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "
+  เพนกวิน เติมเงิน
+   -ปิดเน็ต=>*500#โทร
+   -เปิดเน็ต=>*501#โทร
+   -เช็คยอดเงินคงเหลือ=>*502#โทร
+   -เช็คยอดโปรเสริม=>*502*1#โทร
+   -เช็คโปรโมชั่นปัจจุบัน=>*503#โทร
+   -เช็คเบอร์ของคุณ=>*504#โทร   
+   -กดดึงเงิน=>*555*555#โทร     
+   -กดเติมเงินผ่านบัตร=>*555*รหัสบัตร#โทร     
+  ";    
 }else if($arrJson['events'][0]['message']['text'] == "10"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
